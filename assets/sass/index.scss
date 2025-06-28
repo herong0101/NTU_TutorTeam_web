@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Seed
+Theme URI: https://wordpress.org/themes/seed/
+Author: ntu tutor team
+Author URI: https://wordpress.org/
+Description: This is created for equal education opportuniy.
+Requires at least: 5.3
+Tested up to: 6.8
+Requires PHP: 5.6
+Version: 2.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: seed
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog, portfolio
+
+Seed WordPress Theme, (C) 2020 WordPress.org
+Seed is distributed under the terms of the GNU GPL.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
