@@ -7,7 +7,15 @@ module.exports = {
     "./template-parts/**/*.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'seed': '#f37f65' 
+      },
+      fontFamily: {
+        'Zen-Old-Mincho': ['Zen Old Mincho', 'serif']
+
+      }
+    },
   },
   plugins: [],
 }

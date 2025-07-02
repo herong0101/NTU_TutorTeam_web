@@ -92,11 +92,12 @@
     <section class="flex h-full items-center justify-center text-white">
     <!-- Hero content like headline, button, etc. -->
       <div class="relative text-center mt-6">
-        <h1 class="text-4xl font-bold mb-4">臺大升學輔導種子計畫</h1>
-        <p class="text-lg">幫助有夢想的種子們，成長茁壯。</p>
+        <h1 class="font-Zen-Old-Mincho font-bold text-7xl mb-10">臺大升學輔導種子計畫</h1>
+        <p class="font-Zen-Old-Mincho font-bold text-3xl mt-10">幫助有夢想的種子們，成長茁壯。</p>
         
         <!-- sign up for seed -->
-        <button type="button" class="mt-16 text-white bg-orange-400 hover:bg-orange-500  transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300 font-medium rounded-full text-2xl px-10 py-5 text-center me-1 mb-1">報名計畫</button>
+         <!-- color code : #f37f65 -->
+        <button type="button" class="font-Zen-Old-Mincho font-bold mt-16 text-white bg-seed hover:bg-orange-500  transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300 font-medium rounded-full text-2xl px-10 py-5 text-center me-1 mb-1">報名計畫</button>
       
         
 

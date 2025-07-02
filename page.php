@@ -13,44 +13,37 @@ get_header();?>
 
 <section class="flex flex-col items-center justify-center" style="margin-top:160px">
     <div class="relative text-center">
-        <h1 class="px-3 py-2 text-4xl font-medium text-black">近期活動</h1>
+        <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">近期活動</h1>
         <!-- date, event, link -->
-        <div class="flex flex-col items-start justify-center space-y-4 mt-4">
-            <div class="max-w-none max-h-none w-[800px] h-[300px] p-6 bg-gradient-to-br from-gray-200 to-orange-200 shadow-md rounded-2xl border border-gray-200 relative overflow-hidden">
-                <!-- Simulated window bar -->
-                <div class="absolute top-0 left-0 w-full h-10 bg-white border-b border-gray-200 flex items-center px-4 rounded-t-2xl">
-                    <div class="ml-auto text-sm text-gray-500">YYYY/MM/DD</div>
-                </div>
+        <!-- <div class="flex flex-col items-start justify-center space-y-4 mt-4"> -->
+            <ul class="flex flex-col space-y-4 max-w-none max-h-none w-[800px] h-[300px] p-6 bg-gradient-to-br from-white to-seed shadow-md rounded-2xl border border-gray-200 overflow-hidden mt-6">
                 <!-- Document preview area -->
-                <div class="mt-12">
-                    <h1 class="text-xl font-semibold mb-4">活動名稱</h1>
-                    <p class="text-gray-700 mb-4 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam tincidunt viverra. In augue tortor, lobortis a facilisis ut, aliquet at nisl. Praesent blandit, erat nec vulputate egestas, ligula felis dignissim orci, et viverra nisi risus nec mi.</p>
-                    <div class="text-sm text-blue-500">
-                        <a href="https://tailwindcss.com/">tailwind官方文件</a>
-                    </div>
+                <li class="flex flex-row space-x-4 items-center justify-center mt-6">
+                    <p class="text-gray-700 mb-4 text-left">2025/07/02</p>
+                    <p class="text-gray-700 mb-4 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing e</p>
+                    <a class="text-gray-700 mb-4 text-left" href="https://tailwindcss.com/">tailwind官方文件</a>
+                </li>
+                <li class="flex flex-row space-x-4 items-center justify-center">
+                    <p class="text-gray-700 mb-4 text-left">2025/07/02</p>
+                    <p class="text-gray-700 mb-4 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing e</p>
+                    <a class="text-gray-700 mb-4 text-left" href="https://tailwindcss.com/">tailwind官方文件</a>
+                </li>
+                <li class="flex flex-row space-x-4 items-center justify-center">
+                    <p class="text-gray-700 mb-4 text-left">2025/07/02</p>
+                    <p class="text-gray-700 mb-4 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing e</p>
+                    <a class="text-gray-700 mb-4 text-left" href="https://tailwindcss.com/">tailwind官方文件</a>
+                </li>
+                <div>
+                    <button type="button" class="bg-opacity-0 text-black ring ring-gray-400 ring-offset-0 rounded-full text-lg px-8 py-3 text-center me-1 mb-1 hover:bg-gray-400 transition duration-300">更多活動</button>
                 </div>
-            </div>
-            <div class="max-w-none max-h-none w-[800px] h-[300px] p-6 bg-gradient-to-br from-gray-200 to-orange-200 shadow-md rounded-2xl border border-gray-200 relative overflow-hidden">
-                <!-- Simulated window bar -->
-                <div class="absolute top-0 left-0 w-full h-10 bg-white border-b border-gray-200 flex items-center px-4 rounded-t-2xl">
-                    <div class="ml-auto text-sm text-gray-500">YYYY/MM/DD</div>
-                </div>
-                <!-- Document preview area -->
-                <div class="mt-12">
-                    <h1 class="text-xl font-semibold mb-4">活動名稱</h1>
-                    <p class="text-gray-700 mb-4 text-left">Integer neque ligula, tristique a felis ut, pellentesque feugiat ante. Praesent sit amet ipsum in libero hendrerit consequat.</p>
-                    <div class="text-sm text-blue-500">
-                        <a href="https://www.lipsum.com/">無意義段落產生器</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </ul>
+        <!-- </div> -->
     </div>
 </section>
 
 <section class="flex flex-col items-center justify-center" style="margin-top:160px">
     <div class="relative text-center">
-        <h1 class="px-3 py-2 text-4xl font-medium text-black">最新消息</h1>
+        <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">最新消息</h1>
         <!-- date, event, link -->
         
         <div class="flex flex-row items-stretch justify-center space-x-6 my-12">
