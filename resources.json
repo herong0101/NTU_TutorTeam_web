@@ -1,0 +1,352 @@
+[
+    {
+        "subject": "數學",
+        "date": "2025/07/02",
+        "description": "數學影片描述",
+        "link": "https://example.com/resource1",
+        "type": "影片"
+    },
+    {
+        "subject": "物理",
+        "date": "2025/07/02",
+        "description": "物理習題描述",
+        "link": "https://example.com/resource2",
+        "type": "習題"
+    },
+    {
+        "subject": "英文",
+        "date": "2025/07/09",
+        "description": "英文講義描述",
+        "link": "https://example.com/resource3",
+        "type": "講義"
+    },
+    {
+        "subject": "國文",
+        "date": "2025/06/15",
+        "description": "國文講義 - 古文賞析",
+        "link": "https://example.com/resource4",
+        "type": "講義"
+    },
+    {
+        "subject": "數學",
+        "date": "2025/06/20",
+        "description": "數學習題 - 微積分練習",
+        "link": "https://example.com/resource5",
+        "type": "習題"
+    },
+    {
+        "subject": "物理",
+        "date": "2025/06/25",
+        "description": "物理影片 - 力學概念",
+        "link": "https://example.com/resource6",
+        "type": "影片"
+    },
+    {
+        "subject": "英文",
+        "date": "2025/06/30",
+        "description": "英文習題 - 文法練習",
+        "link": "https://example.com/resource7",
+        "type": "習題"
+    },
+    {
+        "subject": "國文",
+        "date": "2025/05/12",
+        "description": "國文影片 - 詩詞朗誦",
+        "link": "https://example.com/resource8",
+        "type": "影片"
+    },
+    {
+        "subject": "數學",
+        "date": "2025/05/18",
+        "description": "數學講義 - 幾何定理",
+        "link": "https://example.com/resource9",
+        "type": "講義"
+    },
+    {
+        "subject": "物理",
+        "date": "2025/05/25",
+        "description": "物理習題 - 電磁學練習",
+        "link": "https://example.com/resource10",
+        "type": "習題"
+    },
+    {
+        "subject": "英文",
+        "date": "2025/04/10",
+        "description": "英文影片 - 發音練習",
+        "link": "https://example.com/resource11",
+        "type": "影片"
+    },
+    {
+        "subject": "國文",
+        "date": "2025/04/15",
+        "description": "國文習題 - 作文練習",
+        "link": "https://example.com/resource12",
+        "type": "習題"
+    },
+    {
+        "subject": "數學",
+        "date": "2025/04/20",
+        "description": "數學影片 - 三角函數解析",
+        "link": "https://example.com/resource13",
+        "type": "影片"
+    },
+    {
+        "subject": "物理",
+        "date": "2025/04/25",
+        "description": "物理講義 - 熱力學基礎",
+        "link": "https://example.com/resource14",
+        "type": "講義"
+    },
+    {
+        "subject": "英文",
+        "date": "2025/03/08",
+        "description": "英文講義 - 閱讀理解技巧",
+        "link": "https://example.com/resource15",
+        "type": "講義"
+    },
+    {
+        "subject": "國文",
+        "date": "2025/03/15",
+        "description": "國文講義 - 現代文學導讀",
+        "link": "https://example.com/resource16",
+        "type": "講義"
+    },
+    {
+        "subject": "數學",
+        "date": "2025/03/22",
+        "description": "數學習題 - 代數方程式",
+        "link": "https://example.com/resource17",
+        "type": "習題"
+    },
+    {
+        "subject": "物理",
+        "date": "2025/03/28",
+        "description": "物理影片 - 光學原理",
+        "link": "https://example.com/resource18",
+        "type": "影片"
+    },
+    {
+        "subject": "英文",
+        "date": "2025/02/05",
+        "description": "英文習題 - 單字測驗",
+        "link": "https://example.com/resource19",
+        "type": "習題"
+    },
+    {
+        "subject": "國文",
+        "date": "2025/02/12",
+        "description": "國文影片 - 文言文解析",
+        "link": "https://example.com/resource20",
+        "type": "影片"
+    },
+    {
+        "subject": "數學",
+        "date": "2025/02/18",
+        "description": "數學講義 - 統計學概念",
+        "link": "https://example.com/resource21",
+        "type": "講義"
+    },
+    {
+        "subject": "物理",
+        "date": "2025/02/25",
+        "description": "物理習題 - 波動理論",
+        "link": "https://example.com/resource22",
+        "type": "習題"
+    },
+    {
+        "subject": "英文",
+        "date": "2025/01/15",
+        "description": "英文影片 - 會話練習",
+        "link": "https://example.com/resource23",
+        "type": "影片"
+    },
+    {
+        "subject": "國文",
+        "date": "2025/01/22",
+        "description": "國文習題 - 閱讀測驗",
+        "link": "https://example.com/resource24",
+        "type": "習題"
+    },
+    {
+        "subject": "數學",
+        "date": "2025/01/28",
+        "description": "數學影片 - 機率統計",
+        "link": "https://example.com/resource25",
+        "type": "影片"
+    },
+    {
+        "subject": "物理",
+        "date": "2024/12/10",
+        "description": "物理講義 - 量子力學入門",
+        "link": "https://example.com/resource26",
+        "type": "講義"
+    },
+    {
+        "subject": "英文",
+        "date": "2024/12/15",
+        "description": "英文講義 - 寫作技巧",
+        "link": "https://example.com/resource27",
+        "type": "講義"
+    },
+    {
+        "subject": "國文",
+        "date": "2024/12/20",
+        "description": "國文講義 - 修辭學概論",
+        "link": "https://example.com/resource28",
+        "type": "講義"
+    },
+    {
+        "subject": "數學",
+        "date": "2024/12/25",
+        "description": "數學習題 - 向量計算",
+        "link": "https://example.com/resource29",
+        "type": "習題"
+    },
+    {
+        "subject": "物理",
+        "date": "2024/11/08",
+        "description": "物理影片 - 相對論簡介",
+        "link": "https://example.com/resource30",
+        "type": "影片"
+    },
+    {
+        "subject": "英文",
+        "date": "2024/11/15",
+        "description": "英文習題 - 聽力練習",
+        "link": "https://example.com/resource31",
+        "type": "習題"
+    },
+    {
+        "subject": "國文",
+        "date": "2024/11/22",
+        "description": "國文影片 - 成語典故",
+        "link": "https://example.com/resource32",
+        "type": "影片"
+    },
+    {
+        "subject": "數學",
+        "date": "2024/11/28",
+        "description": "數學講義 - 複數運算",
+        "link": "https://example.com/resource33",
+        "type": "講義"
+    },
+    {
+        "subject": "物理",
+        "date": "2024/10/12",
+        "description": "物理習題 - 動力學練習",
+        "link": "https://example.com/resource34",
+        "type": "習題"
+    },
+    {
+        "subject": "英文",
+        "date": "2024/10/18",
+        "description": "英文影片 - 商業英語",
+        "link": "https://example.com/resource35",
+        "type": "影片"
+    },
+    {
+        "subject": "國文",
+        "date": "2024/10/25",
+        "description": "國文習題 - 語法練習",
+        "link": "https://example.com/resource36",
+        "type": "習題"
+    },
+    {
+        "subject": "數學",
+        "date": "2024/10/30",
+        "description": "數學影片 - 解析幾何",
+        "link": "https://example.com/resource37",
+        "type": "影片"
+    },
+    {
+        "subject": "物理",
+        "date": "2024/09/15",
+        "description": "物理講義 - 原子物理",
+        "link": "https://example.com/resource38",
+        "type": "講義"
+    },
+    {
+        "subject": "英文",
+        "date": "2024/09/22",
+        "description": "英文講義 - 時態用法",
+        "link": "https://example.com/resource39",
+        "type": "講義"
+    },
+    {
+        "subject": "國文",
+        "date": "2024/09/28",
+        "description": "國文講義 - 散文欣賞",
+        "link": "https://example.com/resource40",
+        "type": "講義"
+    },
+    {
+        "subject": "數學",
+        "date": "2024/08/10",
+        "description": "數學習題 - 極限運算",
+        "link": "https://example.com/resource41",
+        "type": "習題"
+    },
+    {
+        "subject": "物理",
+        "date": "2024/08/18",
+        "description": "物理影片 - 電路分析",
+        "link": "https://example.com/resource42",
+        "type": "影片"
+    },
+    {
+        "subject": "英文",
+        "date": "2024/08/25",
+        "description": "英文習題 - 片語運用",
+        "link": "https://example.com/resource43",
+        "type": "習題"
+    },
+    {
+        "subject": "國文",
+        "date": "2024/08/30",
+        "description": "國文影片 - 韻文朗讀",
+        "link": "https://example.com/resource44",
+        "type": "影片"
+    },
+    {
+        "subject": "數學",
+        "date": "2024/07/12",
+        "description": "數學講義 - 矩陣運算",
+        "link": "https://example.com/resource45",
+        "type": "講義"
+    },
+    {
+        "subject": "物理",
+        "date": "2024/07/20",
+        "description": "物理習題 - 振動與波",
+        "link": "https://example.com/resource46",
+        "type": "習題"
+    },
+    {
+        "subject": "英文",
+        "date": "2024/07/25",
+        "description": "英文影片 - 英美文化",
+        "link": "https://example.com/resource47",
+        "type": "影片"
+    },
+    {
+        "subject": "國文",
+        "date": "2024/06/15",
+        "description": "國文習題 - 詞彙辨析",
+        "link": "https://example.com/resource48",
+        "type": "習題"
+    },
+    {
+        "subject": "數學",
+        "date": "2024/06/20",
+        "description": "數學影片 - 數列級數",
+        "link": "https://example.com/resource49",
+        "type": "影片"
+    },
+    {
+        "subject": "物理",
+        "date": "2024/06/28",
+        "description": "物理講義 - 流體力學",
+        "link": "https://example.com/resource50",
+        "type": "講義"
+    }
+]

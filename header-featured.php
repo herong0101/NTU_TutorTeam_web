@@ -29,7 +29,7 @@
 		esc_html_e( 'Skip to content', 'twentytwentyone' );
 		?>
 	</a>
-  <header class="relative h-screen bg-cover bg-center" style="background-image: url('http://wp.local/wp-content/uploads/2025/06/book_with_glasses_big.jpg');">
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('http://wp.local/wp-content/uploads/2025/07/精選文章背景圖_裁切.png');">
     <nav class="absolute inset-x-0 top-0 flex justify-between items-center px-6 py-4 bg-transparent border-0 shadow-none">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -61,7 +61,7 @@
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
             <!-- logo -->
             <div class="flex shrink-0 items-center">
-              <img class="h-8 w-auto" src=https://ntututorteam.com/wp-content/uploads/2023/09/cropped-%E7%B2%89%EF%BC%88%E7%9B%B4%E5%BC%8F%EF%BC%89.png" alt="Your Company" />
+              <img class="h-8 w-auto" src="https://ntututorteam.com/wp-content/uploads/2023/09/cropped-%E7%B2%89%EF%BC%88%E7%9B%B4%E5%BC%8F%EF%BC%89.png" alt="Your Company" />
             </div>
             <!-- four tags -->
             <div class="hidden sm:ml-6 sm:block">
@@ -92,12 +92,12 @@
     <section class="flex h-full items-center justify-center text-white">
     <!-- Hero content like headline, button, etc. -->
       <div class="relative text-center mt-6">
-        <h1 class="font-Zen-Old-Mincho font-bold text-7xl mb-10">臺大升學輔導種子計畫</h1>
-        <p class="font-Zen-Old-Mincho font-bold text-3xl mt-10">幫助有夢想的種子們，成長茁壯。</p>
+        <h1 class="font-Zen-Old-Mincho font-bold text-9xl mb-10">精選文章</h1>
+        <!-- <p class="font-Zen-Old-Mincho font-bold text-3xl mt-10">幫助有夢想的種子們，成長茁壯。</p> -->
         
         <!-- sign up for seed -->
          <!-- color code : #f37f65 -->
-        <button type="button" class="font-Zen-Old-Mincho font-bold mt-16 text-white bg-seed hover:bg-orange-500  transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300 font-medium rounded-full text-2xl px-10 py-5 text-center me-1 mb-1">報名計畫</button>
+        <!-- <button type="button" class="font-Zen-Old-Mincho font-bold mt-16 text-white bg-seed hover:bg-orange-500  transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300 font-medium rounded-full text-2xl px-10 py-5 text-center me-1 mb-1">報名計畫</button> -->
       
         
 

@@ -35,7 +35,7 @@
 					</svg>
 				</a>
 				<!-- Mail Icon -->
-				<a href="mailto:ntututorteam@gmail.com" aria-label="Mail" class="text-gray-700 hover:text-green-600">
+				<a href="mailto:ntututorteam@gmail.com" aria-lab	el="Mail" class="text-gray-700 hover:text-green-600">
 					<svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a3 3 0 0 0 3.22 0L22 8m-19 8V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
 					</svg>
