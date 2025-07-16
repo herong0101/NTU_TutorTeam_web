@@ -48,44 +48,123 @@ get_header();?>
         
         <div class="flex flex-row items-stretch justify-center space-x-6 my-12">
             <!-- Left Box -->
-            <div class="w-[320px] h-auto rounded-2xl p-0 flex flex-col items-center justify-start">
-                <!-- Image Area -->
-                <div class="w-[320px] h-[400px] rounded-2xl bg-gray-200 overflow-hidden flex items-center justify-center">
-                    <img src="https://via.placeholder.com/600x400" alt="Sample" class="object-cover w-full h-full rounded-2xl" />
+            <div class="w-[320px] h-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Image Area (4:5 aspect ratio for more height) -->
+                <div class="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
+                    <img src="http://wp.local/wp-content/uploads/2025/07/報名計畫_裁切.png" alt="Sample" class="object-cover w-full h-full" />
                 </div>
-                <!-- Pill Label -->
-                <div class="w-[320px] mt-4 rounded-2xl text-black px-4 py-3 text-sm font-semibold text-center bg-gradient-to-r from-[#f58529] via-[#dd2a7b] to-[#dd2a7b]">
-                    值得不想要到不行幾次還在，的還有是你⋯隔笑死的模其他人，出問題也好喜一直，得很沒能不能的不知勞就是。也好不的我有任欸不那個我算是，這加還會是不是書好會回報⋯的時有認好邊還有說可地方⋯機會邊什麼感，都不能狀況，出粉絲這個一起出要給就好因為。日快樂不是很想這結婚有發以後：因為我自己寫的覺得後成功，知道是第一：永一段顯大家⋯的所有都要，部分較喜歡而且還
+                <!-- Content Area -->
+                <div class="p-4">
+                    <!-- Social Icons -->
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex space-x-4">
+                            <!-- Like Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </button>
+                            <!-- Comment Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            </button>
+                            <!-- Share Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="text-sm text-gray-800 leading-relaxed">
+                        值得不想要到不行幾次還在，的還有是你⋯隔笑死的模其他人，出問題也好喜一直，得很沒能不能的不知勞就是。
+                    </div>
                 </div>
             </div>
 
             <!-- Middle Box -->
-            <div class="w-[320px] h-auto rounded-2xl p-0 flex flex-col items-center justify-start">
-                <!-- Image Area -->
-                <div class="w-[320px] h-[400px] rounded-2xl bg-gray-200 overflow-hidden flex items-center justify-center">
-                    <img src="https://via.placeholder.com/600x400" alt="Sample" class="object-cover w-full h-full rounded-2xl" />
+            <div class="w-[320px] h-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Image Area (4:5 aspect ratio for more height) -->
+                <div class="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
+                    <img src="https://via.placeholder.com/400x500" alt="Sample" class="object-cover w-full h-full" />
                 </div>
-                <!-- Pill Label -->
-                <div class="w-[320px] mt-4 rounded-2xl text-black px-4 py-3 text-sm font-semibold text-center bg-gradient-to-r from-[#dd2a7b] via-[#8134af] to-[#515bd4]">
-                    玩家不。比法但會有點果感受到⋯哈關他們導致。化有特在一起很多，我媽也好他們不是應，個人可以給就是小天。
+                <!-- Content Area -->
+                <div class="p-4">
+                    <!-- Social Icons -->
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex space-x-4">
+                            <!-- Like Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </button>
+                            <!-- Comment Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            </button>
+                            <!-- Share Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="text-sm text-gray-800 leading-relaxed">
+                        玩家不。比法但會有點果感受到⋯哈關他們導致。化有特在一起很多，我媽也好他們不是應，個人可以給就是小天。
+                    </div>
                 </div>
             </div>
             
             <!-- Right Box -->
-            <div class="w-[320px] h-auto rounded-2xl p-0 flex flex-col items-center justify-start">
-                <!-- Image Area -->
-                <div class="w-[320px] h-[400px] rounded-2xl bg-gray-200 overflow-hidden flex items-center justify-center">
-                    <img src="https://via.placeholder.com/600x400" alt="Sample" class="object-cover w-full h-full rounded-2xl" />
+            <div class="w-[320px] h-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Image Area (4:5 aspect ratio for more height) -->
+                <div class="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
+                    <img src="https://via.placeholder.com/400x500" alt="Sample" class="object-cover w-full h-full" />
                 </div>
-                <!-- Pill Label -->
-                <div class="w-[320px] mt-4 rounded-2xl text-black px-4 py-3 text-sm font-semibold text-center bg-gradient-to-r from-[#515bd4] via-[#405de6] to-[#5851db]">
-                    ，都不能狀況，出粉絲這個一起出要給就好因為。日快樂不是很想這結婚有發以後：因為我自己寫的覺得後成功，知道是第一：永一段顯大家⋯的所有都要，部分較喜歡而且還喜一直，得很沒能不能的不知勞就是。也好不的我有任欸不那個我算是，這加還
+                <!-- Content Area -->
+                <div class="p-4">
+                    <!-- Social Icons -->
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex space-x-4">
+                            <!-- Like Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </button>
+                            <!-- Comment Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            </button>
+                            <!-- Share Icon -->
+                            <button class="hover:opacity-60 transition-opacity">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="text-sm text-gray-800 leading-relaxed">
+                        都不能狀況，出粉絲這個一起出要給就好因為。日快樂不是很想這結婚有發以後：因為我自己寫的覺得後成功，知道是第一。
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- 計畫特色 -->
 <section class="flex flex-col items-center justify-center" style="margin-top:160px">
     <div class="relative text-center">
         <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">計畫特色</h1>
