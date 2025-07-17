@@ -3,16 +3,18 @@
 get_header('resources');
 ?>
 
-<section class="container mx-auto p-4">
+<section class="container mx-auto p-4 bg-gray-50">
     
     <!-- List Boxes -->
     <div class="flex flex-row space-x-6">
         <!-- List Box 1 -->
-        <div class="relative inline-block flex flex-col space-y-2">
+        <div class="relative inline-block flex flex-col space-y-2 w-40">
             <span class="text-sm">科目</span>
-            <button id="dropdownButton1" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">選擇科目</button>
-            <div id="dropdown1" class="absolute z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+            <button id="dropdownButton1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-700 text-left inline-flex items-center justify-between" type="button">選擇科目</button>
+            <div id="dropdown1" class="absolute z-10 hidden bg-white w-full border border-gray-300 rounded-md shadow-lg" style="top: 100%;">
+                <ul class="py-1 text-sm text-gray-700">
+                    <!-- 數甲、分科物理化學生物會再加入(resources.json也要改) -->
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="全部">全部</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="國文">國文</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="英文">英文</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="數學">數學</a></li>
@@ -22,11 +24,11 @@ get_header('resources');
         </div>
 
         <!-- List Box 2 -->
-        <div class="relative inline-block flex flex-col space-y-2">
+        <div class="relative inline-block flex flex-col space-y-2 w-40">
             <span class="text-sm">類型</span>
-            <button id="dropdownButton2" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">選擇類型</button>
-            <div id="dropdown2" class="absolute z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+            <button id="dropdownButton2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-700 text-left inline-flex items-center justify-between" type="button">選擇類型</button>
+            <div id="dropdown2" class="absolute z-10 hidden bg-white w-full border border-gray-300 rounded-md shadow-lg" style="top: 100%;">
+                <ul class="py-1 text-sm text-gray-700">
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="全部">全部</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="講義">講義</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="習題">習題</a></li>
@@ -35,8 +37,11 @@ get_header('resources');
             </div>
         </div>
 
-        <!-- add search bar -->
-         <!-- 2025/7/15 -->
+        <!-- add search bar to find corresponding resources from resources.json -->
+        <div class="relative inline-block flex flex-col space-y-2 w-40">
+            <span class="text-sm">搜尋</span>
+            <input type="text" id="searchInput" placeholder="搜尋描述..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
     </div>
     
     
@@ -64,29 +69,8 @@ get_header('resources');
         });
     </script>
 
-    <!-- Display Box -->
-    <!-- <div class="bg-[#F37F65] text-white p-4 rounded-lg flex justify-between items-center mb-4" style="margin-top:160px">
-        <span>113-2</span>
-        <span>一些對於該資料夾內講義的簡單描述</span>
-        <a href="https://example.com" target="_blank">
-            <button class="bg-[#F37F65] border-none text-white p-2 rounded-lg cursor-pointer hover:bg-[#e66b50] transition-colors">Redirect</button>
-        </a>
-    </div> -->
-
     <!-- Data Display -->
     <div id="data-container" class="mt-6">
-        <!-- Example Data -->
-        <div class="data-item" data-subject="國文" data-type="講義">
-            <span>2025/07/02</span>
-            <span>國文講義描述</span>
-            <a href="https://example.com" target="_blank">外部連結</a>
-        </div>
-        <div class="data-item" data-subject="英文" data-type="習題">
-            <span>2025/07/03</span>
-            <span>英文習題描述</span>
-            <a href="https://example.com" target="_blank">外部連結</a>
-        </div>
-
         <!-- add data from resources.json -->
         <?php
         $json_file = get_template_directory() . '/resources.json';
@@ -118,6 +102,10 @@ get_header('resources');
         item.addEventListener('click', function(e) {
             e.preventDefault();
             selectedSubject = this.dataset.subject;
+            // if "全部" is selected, reset selectedSubject 
+            if (selectedSubject === '全部') {
+                selectedSubject = null;
+            }
             filterData();
         });
     });
@@ -147,39 +135,57 @@ get_header('resources');
         });
     }
 
-    // implement lazy loading with pagination to first show 20 items
-    let currentPage = 1;
-    const itemsPerPage = 20;    
-    function loadMoreData() {
+    // implement lazy loading with pagination to first show 4 items, while user can click "load more" to load 4 more items and previously loaded items will not be removed
+    let currentPage = 0;
+    const itemsPerPage = 4;
+    function loadMoreItems() {
         const dataItems = document.querySelectorAll('.data-item');
         const totalItems = dataItems.length;
-        const start = (currentPage - 1) * itemsPerPage;
+        const start = currentPage * itemsPerPage;
         const end = start + itemsPerPage;
 
-        for (let i = 0; i < totalItems; i++) {
-            if (i >= start && i < end) {
-                dataItems[i].style.display = 'block';
-            } else {
-                dataItems[i].style.display = 'none';
-            }
+        for (let i = start; i < end && i < totalItems; i++) {
+            dataItems[i].style.display = 'block';
         }
 
         currentPage++;
         if (end >= totalItems) {
-            document.getElementById('load-more-button').style.display = 'none';
+            document.getElementById('loadMoreButton').style.display = 'none';
         }
     }
     document.addEventListener('DOMContentLoaded', function() {
-        loadMoreData();
-        const loadMoreButton = document.createElement('button');
-        loadMoreButton.id = 'load-more-button';
-        loadMoreButton.textContent = '載入更多';
-        loadMoreButton.className = 'bg-blue-500 text-gray-600 px-4 py-2 rounded mt-4';
-        loadMoreButton.addEventListener('click', loadMoreData);
-        document.getElementById('data-container').appendChild(loadMoreButton);
+        loadMoreItems(); // Load initial items
+        document.getElementById('loadMoreButton').addEventListener('click', loadMoreItems);
     });
+    // Add "Load More" button
+    const loadMoreButton = document.createElement('button');
+    loadMoreButton.id = 'loadMoreButton';
+    loadMoreButton.className = 'w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-700 hover:bg-gray-50';
+    loadMoreButton.textContent = '載入更多';
+    document.getElementById('data-container').appendChild(loadMoreButton);
+    // Initially hide all items except the first 4
+    const dataItems = document.querySelectorAll('.data-item');
+    dataItems.forEach((item, index) => {
+        if (index >= 4) {
+            item.style.display = 'none';
+        }
+    });
+    
 
-
+    // implement search functionality
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const dataItems = document.querySelectorAll('.data-item');
+        dataItems.forEach(item => {
+            const description = item.querySelector('span:nth-child(2)').textContent.toLowerCase();
+            if (description.includes(searchTerm)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+    
 </script>
 
 
