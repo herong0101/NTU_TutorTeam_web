@@ -33,9 +33,8 @@ get_header();?>
                     <p class="text-gray-700 mb-4 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing e</p>
                     <a class="text-gray-700 mb-4 text-left" href="https://tailwindcss.com/">tailwind官方文件</a>
                 </li>
-                <div>
-                    <a href="<?php echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black ring ring-gray-400 ring-offset-0 rounded-full text-lg px-8 py-3 text-center me-1 mb-1 hover:bg-gray-400 transition duration-300">更多活動</button> </a>
-                    
+                <div class="flex justify-center space-x-4">
+                    <a href="<?php echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black ring ring-gray-400 ring-offset-0 rounded-full text-lg px-8 py-3 text-center hover:bg-gray-400 transition duration-300">更多活動</button></a>
                 </div>
             </ul>
         <!-- </div> -->

@@ -676,3 +676,17 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 	}
 
 endif;
+
+// Add custom user role for Authorized Student
+function add_authorized_student_role() {
+    if ( ! get_role( 'authorized_student' ) ) {
+        add_role(
+            'authorized_student',
+            __( 'Authorized Student' ),
+            array(
+                'read' => true, // Grants read access
+            )
+        );
+    }
+}
+add_action( 'init', 'add_authorized_student_role' );

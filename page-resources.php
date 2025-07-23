@@ -73,17 +73,41 @@ get_header('resources');
     <div id="data-container" class="mt-6">
         <!-- add data from resources.json -->
         <?php
+        // Get the current user
+        $current_user = wp_get_current_user();
+        $is_authorized_student = in_array( 'authorized_student', (array) $current_user->roles );
+
         $json_file = get_template_directory() . '/resources.json';
 
         if (file_exists($json_file)) {
             $json_data = file_get_contents($json_file);
-            $resources = json_decode($json_data, true);
-            foreach ($resources as $resource) {
-                echo '<div class="data-item" data-subject="' . esc_attr($resource['subject']) . '" data-type="' . esc_attr($resource['type']) . '">';
-                echo '<span>' . esc_html($resource['date']) . '</span>';
-                echo '<span>' . esc_html($resource['description']) . '</span>';
-                echo '<a href="' . esc_url($resource['link']) . '" target="_blank">外部連結</a>';
-                echo '</div>';
+            $all_resources = json_decode($json_data, true);
+            $resources_to_display = array();
+
+            if ($is_authorized_student) {
+                // Authorized students see all resources
+                $resources_to_display = $all_resources;
+            } else {
+                // Normal users see only resources older than one year
+                $one_year_ago = new DateTime('-1 year');
+                foreach ($all_resources as $resource) {
+                    $resource_date = DateTime::createFromFormat('Y/m/d', $resource['date']);
+                    if ($resource_date && $resource_date < $one_year_ago) {
+                        $resources_to_display[] = $resource;
+                    }
+                }
+            }
+
+            if (empty($resources_to_display)) {
+                echo '<p>目前沒有可用的資源。</p>';
+            } else {
+                foreach ($resources_to_display as $resource) {
+                    echo '<div class="data-item" data-subject="' . esc_attr($resource['subject']) . '" data-type="' . esc_attr($resource['type']) . '">';
+                    echo '<span>' . esc_html($resource['date']) . '</span>';
+                    echo '<span>' . esc_html($resource['description']) . '</span>';
+                    echo '<a href="' . esc_url($resource['link']) . '" target="_blank">外部連結</a>';
+                    echo '</div>';
+                }
             }
         } else {
             echo '<p>資源檔案不存在。</p>';
