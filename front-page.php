@@ -47,11 +47,16 @@ get_header();?>
         <!-- date, event, link -->
         
         <div class="flex flex-row items-stretch justify-center space-x-6 my-12">
+            <?php
+            $left_post = get_latest_instagram_post('left');
+            $mid_post = get_latest_instagram_post('mid');
+            $right_post = get_latest_instagram_post('right');
+            ?>
             <!-- Left Box -->
             <div class="w-[320px] h-auto bg-white rounded-2xl shadow-lg overflow-hidden">
                 <!-- Image Area (4:5 aspect ratio for more height) -->
                 <div class="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
-                    <img src="http://wp.local/wp-content/uploads/2025/07/報名計畫_裁切.png" alt="Sample" class="object-cover w-full h-full" />
+                    <img src="<?php echo $left_post ? esc_url($left_post->image_path) : 'http://wp.local/wp-content/uploads/2025/07/報名計畫_裁切.png'; ?>" alt="Sample" class="object-cover w-full h-full" />
                 </div>
                 <!-- Content Area -->
                 <div class="p-4">
@@ -79,8 +84,8 @@ get_header();?>
                         </div>
                     </div>
                     <!-- Description -->
-                    <div class="text-sm text-gray-800 leading-relaxed">
-                        值得不想要到不行幾次還在，的還有是你⋯隔笑死的模其他人，出問題也好喜一直，得很沒能不能的不知勞就是。
+                    <div class="text-sm text-gray-800 leading-relaxed text-left">
+                        <?php echo $left_post ? esc_html($left_post->text) : 'Sample Content'; ?>
                     </div>
                 </div>
             </div>
@@ -89,7 +94,7 @@ get_header();?>
             <div class="w-[320px] h-auto bg-white rounded-2xl shadow-lg overflow-hidden">
                 <!-- Image Area (4:5 aspect ratio for more height) -->
                 <div class="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
-                    <img src="https://via.placeholder.com/400x500" alt="Sample" class="object-cover w-full h-full" />
+                    <img src="<?php echo $mid_post ? esc_url($mid_post->image_path) : 'http://wp.local/wp-content/uploads/2025/07/報名計畫_裁切.png'; ?>" alt="Sample" class="object-cover w-full h-full" />
                 </div>
                 <!-- Content Area -->
                 <div class="p-4">
@@ -117,8 +122,8 @@ get_header();?>
                         </div>
                     </div>
                     <!-- Description -->
-                    <div class="text-sm text-gray-800 leading-relaxed">
-                        玩家不。比法但會有點果感受到⋯哈關他們導致。化有特在一起很多，我媽也好他們不是應，個人可以給就是小天。
+                    <div class="text-sm text-gray-800 leading-relaxed text-left">
+                        <?php echo $mid_post ? esc_html($mid_post->text) : 'Sample Content'; ?>
                     </div>
                 </div>
             </div>
@@ -127,7 +132,7 @@ get_header();?>
             <div class="w-[320px] h-auto bg-white rounded-2xl shadow-lg overflow-hidden">
                 <!-- Image Area (4:5 aspect ratio for more height) -->
                 <div class="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
-                    <img src="https://via.placeholder.com/400x500" alt="Sample" class="object-cover w-full h-full" />
+                    <img src="<?php echo $right_post ? esc_url($right_post->image_path) : 'http://wp.local/wp-content/uploads/2025/07/報名計畫_裁切.png'; ?>" alt="Sample" class="object-cover w-full h-full" />
                 </div>
                 <!-- Content Area -->
                 <div class="p-4">
@@ -155,8 +160,8 @@ get_header();?>
                         </div>
                     </div>
                     <!-- Description -->
-                    <div class="text-sm text-gray-800 leading-relaxed">
-                        都不能狀況，出粉絲這個一起出要給就好因為。日快樂不是很想這結婚有發以後：因為我自己寫的覺得後成功，知道是第一。
+                    <div class="text-sm text-gray-800 leading-relaxed text-left">
+                        <?php echo $right_post ? esc_html($right_post->text) : 'You find an Easter egg!'; ?>
                     </div>
                 </div>
             </div>
