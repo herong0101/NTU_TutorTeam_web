@@ -103,7 +103,7 @@
         </a>
 
         <a href="http://localhost/wordpress/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect" data-redirect="current" data-provider="google" data-popupwidth="600" data-popupheight="600">
-          <button type="button" class="bg-blue-500 text-white rounded-full text-lg px-8 py-3 text-center hover:bg-blue-600 transition duration-300">登入</button>
+          <button type="button" class="font-Zen-Old-Mincho font-bold mt-16 text-white bg-seed hover:bg-orange-500  transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300 font-medium rounded-full text-2xl px-10 py-5 text-center me-1 mb-1">登入</button>
         </a>
         
 

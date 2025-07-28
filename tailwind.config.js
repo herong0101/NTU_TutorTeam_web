@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'seed': '#f37f65' 
+        'seed': '#f37f65',
+        'hero-gray': '#AFAFA3'
       },
       fontFamily: {
         'Zen-Old-Mincho': ['Zen Old Mincho', 'serif']

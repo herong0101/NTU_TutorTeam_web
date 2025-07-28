@@ -34,7 +34,7 @@ get_header();?>
                     <a class="text-gray-700 mb-4 text-left" href="https://tailwindcss.com/">tailwind官方文件</a>
                 </li>
                 <div class="flex justify-center space-x-4">
-                    <a href="<?php echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black ring ring-gray-400 ring-offset-0 rounded-full text-lg px-8 py-3 text-center hover:bg-gray-400 transition duration-300">更多活動</button></a>
+                    <a href="<?php echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black rounded-full text-lg px-8 py-3 text-center hover:bg-hero-gray transition duration-300">更多活動</button></a>
                 </div>
             </ul>
         <!-- </div> -->
@@ -174,9 +174,9 @@ get_header();?>
     <div class="relative text-center">
         <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">計畫特色</h1>
         
-        <div class="relative flex justify-center items-start" style="height: 320px; margin-top:40px">
+        <div class="relative flex justify-center items-start" style="height: 320px; margin-top:80px">
             <!-- Left rectangle (lowered by 80px) -->
-            <div class="absolute left-1/2 transform -translate-x-[90%] top-[120px] w-[400px] h-[250px] bg-yellow-200 rounded-2xl shadow-lg flex flex-col items-center justify-center z-10">
+            <div class="absolute left-1/2 transform -translate-x-[80%] top-[120px] w-[400px] h-[250px] bg-yellow-200 rounded-2xl shadow-lg flex flex-col items-center justify-center z-10">
                 <h2 class="font-bold text-2xl mb-2">工作坊</h2>
                 <p class="text-base text-gray-700">邀請專業人士、教授進行科系、備審、面試等工作坊。</p>
             </div>
