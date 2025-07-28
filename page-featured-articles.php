@@ -6,20 +6,15 @@ get_header('featured');
     
     <div class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                 
                 <!-- Left Side - Image -->
-                <div class="relative">
+                <div class="relative p-7">
                     <div class="image-placeholder aspect-square flex items-center justify-center">
                         <!-- Sample Image - Replace with WordPress featured image -->
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=400&fit=crop&crop=center" 
+                        <img src="http://localhost/wordpress/wp-content/uploads/2025/07/精選文章示範圖.jpg" 
                              alt="Brain illustration" 
                              class="w-full h-full object-cover rounded-2xl opacity-80">
-                        
-                        <!-- Fallback if no image -->
-                        <div class="absolute inset-0 flex items-center justify-center text-6xl opacity-50">
-                            🧠
-                        </div>
                     </div>
                 </div>
                 

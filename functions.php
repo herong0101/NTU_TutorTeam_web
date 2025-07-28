@@ -690,3 +690,18 @@ function add_authorized_student_role() {
     }
 }
 add_action( 'init', 'add_authorized_student_role' );
+
+// cache busting to ensure new style.css sent everytime is recognized by the browser
+function seed_enqueue_styles() {
+    // Get the file modification time of style.css
+    $version = filemtime( get_stylesheet_directory() . '/style.css' );
+
+    // Enqueue the main stylesheet with the file modification time as the version number
+    wp_enqueue_style( 
+        'seed-style', 
+        get_stylesheet_uri(), 
+        array(), 
+        $version 
+    );
+}
+add_action( 'wp_enqueue_scripts', 'seed_enqueue_styles' );

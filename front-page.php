@@ -34,7 +34,7 @@ get_header();?>
                     <a class="text-gray-700 mb-4 text-left" href="https://tailwindcss.com/">tailwind官方文件</a>
                 </li>
                 <div class="flex justify-center space-x-4">
-                    <a href="<?php echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black rounded-full text-lg px-8 py-3 text-center hover:bg-hero-gray transition duration-300">更多活動</button></a>
+                    <a href="<?php echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black rounded-full text-lg px-8 py-3 text-center hover:bg-seed-gray transition duration-300">更多活動</button></a>
                 </div>
             </ul>
         <!-- </div> -->
@@ -176,21 +176,25 @@ get_header();?>
         
         <div class="relative flex justify-center items-start" style="height: 320px; margin-top:80px">
             <!-- Left rectangle (lowered by 80px) -->
-            <div class="absolute left-1/2 transform -translate-x-[80%] top-[120px] w-[400px] h-[250px] bg-yellow-200 rounded-2xl shadow-lg flex flex-col items-center justify-center z-10">
+            <div class="absolute left-1/2 transform -translate-x-[95%] top-[120px] w-[400px] h-[250px] bg-seed-orange rounded-2xl shadow-lg flex flex-col items-center justify-center z-10">
                 <h2 class="font-bold text-2xl mb-2">工作坊</h2>
                 <p class="text-base text-gray-700">邀請專業人士、教授進行科系、備審、面試等工作坊。</p>
             </div>
             <!-- Right rectangle (higher, crosses left at center) -->
-            <div class="absolute left-1/2 transform -translate-x-[10%] -top-5 w-[400px] h-[250px] bg-blue-200 rounded-2xl shadow-lg flex flex-col items-center justify-center z-20">
+            <div class="absolute left-1/2 transform -translate-x-[5%] -top-5 w-[400px] h-[250px] bg-seed-gray rounded-2xl shadow-lg flex flex-col items-center justify-center z-20">
                 <h2 class="font-bold text-2xl mb-2">升學課程</h2>
                 <p class="text-base text-gray-700">提供升大學之總複習課程以及高中各學科解題群組。</p>
             </div>
         </div>
 
+        <div class="flex flex-row items-center justify-center text-5xl" style="margin-top:120px">
+            <span class="font-Zen-Old-Mincho font-bold text-black">已免費服務超過</span>
+            <div id="counter" class="mx-2 text-black"></div>
+            <span class="font-Zen-Old-Mincho font-bold text-black">位高中學員</span>
+        </div>
+
         <div class="flex flex-row items-center justify-center text-5xl" style="margin-top:20px">
-            <span class="font-Zen-Old-Mincho font-bold text-4xl text-black">已免費服務超過</span>
-            <div id="counter" class="mx-2 text-4xl text-black"></div>
-            <span class="font-Zen-Old-Mincho font-bold text-4xl text-black">位高中學員</span>
+            <span class="font-Zen-Old-Mincho font-bold text-black">讓他們在升學的路上不孤單</span>
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -217,6 +221,53 @@ get_header();?>
         
     </div>
 </section>
+
+<!-- 協力組織 -->
+<section class="flex flex-col items-center justify-center" style="margin-top:160px">
+    <div class="relative text-center">
+        <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">協力組織</h1>
+        
+        <div class="flex flex-row items-stretch justify-center space-x-6 my-12">
+            <!-- Left Box -->
+            <div class="w-[150px] h-auto bg-white overflow-hidden">
+                <div class="w-full bg-gray-200 overflow-hidden">
+                    <img src="http://localhost/wordpress/wp-content/uploads/2025/07/龍騰出版社.jpg" alt="龍騰" class="object-cover w-full h-full" />
+                </div>
+                <!-- Description -->
+                <div class="text-sm text-gray-800 leading-relaxed text-center mt-4">
+                    <span>龍騰文化</span>
+                </div>
+                
+            </div>
+
+            <!-- Middle Box -->
+            <div class="w-[450px] h-auto bg-white overflow-hidden">
+                <div class="w-full bg-gray-200 overflow-hidden">
+                    <img src="http://localhost/wordpress/wp-content/uploads/2025/07/台北市思源文教基金會_裁切.png" alt="思源文教" class="object-cover w-full h-full" />
+                </div>
+                <!-- Description -->
+                <div class="text-sm text-gray-800 leading-relaxed text-center mt-4">
+                    <span>台北市思源文教基金會</span>
+                </div>
+                
+            </div>
+            
+            <!-- Right Box -->
+            <div class="w-[392px] h-auto bg-white overflow-hidden">
+                <div class="w-full bg-gray-200 overflow-hidden">
+                    <img src="http://localhost/wordpress/wp-content/uploads/2025/07/台大EMBA校友會_裁切.png" alt="台大EMBA校友會" class="object-cover w-full h-full" />
+                </div>
+                <!-- Description -->
+                <div class="text-sm text-gray-800 leading-relaxed text-center mt-4">
+                    <span>台大EMBA校友會</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <?php
 
 

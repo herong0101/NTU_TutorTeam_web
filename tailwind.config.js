@@ -10,7 +10,9 @@ module.exports = {
     extend: {
       colors: {
         'seed': '#f37f65',
-        'hero-gray': '#AFAFA3'
+        'seed-gray': '#BBB3B1',
+        'seed-orange': '#F3AA8F',
+        'youtube-red': '#FF0033'
       },
       fontFamily: {
         'Zen-Old-Mincho': ['Zen Old Mincho', 'serif']

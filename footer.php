@@ -41,7 +41,7 @@
 					</svg>
 				</a>
 				<!-- YouTube Icon -->
-				<a href="https://www.youtube.com/@%E8%87%BA%E5%A4%A7%E5%8D%87%E5%AD%B8%E8%BC%94%E5%B0%8E%E7%A8%AE%E5%AD%90%E8%A8%88%E7%95%AB" target="_blank" aria-label="YouTube" class="text-gray-700 hover:text-red">
+				<a href="https://www.youtube.com/@%E8%87%BA%E5%A4%A7%E5%8D%87%E5%AD%B8%E8%BC%94%E5%B0%8E%E7%A8%AE%E5%AD%90%E8%A8%88%E7%95%AB" target="_blank" aria-label="YouTube" class="text-gray-700 hover:text-youtube-red">
 					<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
 						<path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.379 3.5 12 3.5 12 3.5s-7.379 0-9.391.569A2.994 2.994 0 0 0 .502 6.186C0 8.207 0 12 0 12s0 3.793.502 5.814a2.994 2.994 0 0 0 2.107 2.117C4.621 20.5 12 20.5 12 20.5s7.379 0 9.391-.569a2.994 2.994 0 0 0 2.107-2.117C24 15.793 24 12 24 12s0-3.793-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
 					</svg>
