@@ -736,6 +736,14 @@ video {
   margin-inline-end: 0.25rem;
 }
 
+.ml-auto{
+  margin-left: auto;
+}
+
+.mr-10{
+  margin-right: 2.5rem;
+}
+
 .mt-10{
   margin-top: 2.5rem;
 }
@@ -1595,6 +1603,10 @@ video {
 
   .sm\:block{
     display: block;
+  }
+
+  .sm\:flex{
+    display: flex;
   }
 
   .sm\:hidden{

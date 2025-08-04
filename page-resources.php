@@ -37,6 +37,20 @@ get_header('resources');
             </div>
         </div>
 
+        <!-- List Box 3 -->
+        <div class="relative inline-block flex flex-col space-y-2 w-40">
+            <span class="text-sm">屆數</span>
+            <button id="dropdownButton2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-700 text-left inline-flex items-center justify-between" type="button">選擇類型</button>
+            <div id="dropdown2" class="absolute z-10 hidden bg-white w-full border border-gray-300 rounded-md shadow-lg" style="top: 100%;">
+                <ul class="py-1 text-sm text-gray-700">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="全部">全部</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="114"></a>114學年</li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="113"></a>113學年</li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="112">112學年</a></li>
+                </ul>
+            </div>
+        </div>
+
         <!-- add search bar to find corresponding resources from resources.json -->
         <div class="relative inline-block flex flex-col space-y-2 w-40">
             <span class="text-sm">搜尋</span>

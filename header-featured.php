@@ -63,15 +63,18 @@
             <div class="flex shrink-0 items-center">
               <img class="h-8 w-auto" src="https://ntututorteam.com/wp-content/uploads/2023/09/cropped-%E7%B2%89%EF%BC%88%E7%9B%B4%E5%BC%8F%EF%BC%89.png" alt="Your Company" />
             </div>
-            <!-- four tags -->
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="<?php echo home_url('/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300"aria-current="page">首頁</a>
-                <a href="<?php echo home_url('/featured-articles/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300"aria-current="page">精選文章</a>
-                <a href="<?php echo home_url('/resources/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300"aria-current="page">教材資源</a>
-                <a href="<?php echo home_url('/about-us/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300"aria-current="page">關於我們</a>
-              </div>
+            <!-- four tags and Google login button -->
+            <div class="sm:ml-6 sm:flex items-center space-x-4">
+              <!-- Navigation Tags -->
+              <a href="<?php echo home_url('/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300" aria-current="page">首頁</a>
+              <a href="<?php echo home_url('/featured-articles/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300" aria-current="page">精選文章</a>
+              <a href="<?php echo home_url('/resources/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300" aria-current="page">教材資源</a>
+              <a href="<?php echo home_url('/about-us/'); ?>" class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black transition duration-300" aria-current="page">關於我們</a>
+
+              <!-- Google Login Button -->
+              <a href="http://localhost/wordpress/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect" data-redirect="current" data-provider="google" data-popupwidth="600" data-popupheight="600" class="ml-auto mr-10">
+                <button type="button" class="font-Zen-Old-Mincho font-bold text-white bg-seed hover:bg-orange-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300 font-medium rounded-full text-sm px-3 py-2">登入</button>
+              </a>
             </div>
           </div>
         </div>
