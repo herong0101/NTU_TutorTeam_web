@@ -16,10 +16,18 @@ module.exports = {
       },
       fontFamily: {
         'Zen-Old-Mincho': ['Zen Old Mincho', 'serif']
-
-      }
+      },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

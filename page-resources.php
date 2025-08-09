@@ -40,13 +40,13 @@ get_header('resources');
         <!-- List Box 3 -->
         <div class="relative inline-block flex flex-col space-y-2 w-40">
             <span class="text-sm">屆數</span>
-            <button id="dropdownButton2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-700 text-left inline-flex items-center justify-between" type="button">選擇類型</button>
-            <div id="dropdown2" class="absolute z-10 hidden bg-white w-full border border-gray-300 rounded-md shadow-lg" style="top: 100%;">
+            <button id="dropdownButton3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-700 text-left inline-flex items-center justify-between" type="button">選擇屆數</button>
+            <div id="dropdown3" class="absolute z-10 hidden bg-white w-full border border-gray-300 rounded-md shadow-lg" style="top: 100%;">
                 <ul class="py-1 text-sm text-gray-700">
-                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="全部">全部</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="114"></a>114學年</li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="113"></a>113學年</li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-type="112">112學年</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-term="全部">全部</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-term="114">114學年</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-term="113">113學年</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-term="112">112學年</a></li>
                 </ul>
             </div>
         </div>
@@ -69,65 +69,66 @@ get_header('resources');
             const dropdown2 = document.getElementById('dropdown2');
             dropdown2.classList.toggle('hidden');
         });
+        document.getElementById('dropdownButton3').addEventListener('click', function() {
+            const dropdown3 = document.getElementById('dropdown3');
+            dropdown3.classList.toggle('hidden')
+        })
 
         // hide list if user click outside of the listbox
         document.addEventListener('click', function(event) {
             const dropdown1 = document.getElementById('dropdown1');
             const dropdown2 = document.getElementById('dropdown2');
+            const dropdown3 = document.getElementById('dropdown3');
             if (!event.target.closest('#dropdownButton1') && !event.target.closest('#dropdown1')) {
                 dropdown1.classList.add('hidden');
             }
-            if (!event.target.closest('#dropdownButton2') && !event.target.closest('#dropdown2')) {
+            if (!event.target.closest('#dropdownButton2') && !event.target.closest('#dropdown2') ) {
                 dropdown2.classList.add('hidden');
+            }
+            if(!event.target.closest('#dropdownButton3') && !event.target.closest('#dropdown3')){
+                dropdown3.classList.add('hidden');
             }
         });
     </script>
 
     <!-- Data Display -->
     <div id="data-container" class="mt-6">
-        <!-- add data from resources.json -->
+        <!-- Display resources from custom post type -->
         <?php
-        // Get the current user
-        $current_user = wp_get_current_user();
-        $is_authorized_student = in_array( 'authorized_student', (array) $current_user->roles );
+        $args = array(
+            'post_type' => 'resource',
+            'posts_per_page' => -1, // Display all resources
+            'post_status' => 'publish'
+        );
+        $resources_query = new WP_Query( $args );
 
-        $json_file = get_template_directory() . '/resources.json';
-
-        if (file_exists($json_file)) {
-            $json_data = file_get_contents($json_file);
-            $all_resources = json_decode($json_data, true);
-            $resources_to_display = array();
-
-            if ($is_authorized_student) {
-                // Authorized students see all resources
-                $resources_to_display = $all_resources;
-            } else {
-                // Normal users see only resources older than one year
-                $one_year_ago = new DateTime('-1 year');
-                foreach ($all_resources as $resource) {
-                    $resource_date = DateTime::createFromFormat('Y/m/d', $resource['date']);
-                    if ($resource_date && $resource_date < $one_year_ago) {
-                        $resources_to_display[] = $resource;
-                    }
-                }
-            }
-
-            if (empty($resources_to_display)) {
-                echo '<p>目前沒有可用的資源。</p>';
-            } else {
-                foreach ($resources_to_display as $resource) {
-                    echo '<div class="data-item" data-subject="' . esc_attr($resource['subject']) . '" data-type="' . esc_attr($resource['type']) . '">';
-                    echo '<span>' . esc_html($resource['date']) . '</span>';
-                    echo '<span>' . esc_html($resource['description']) . '</span>';
-                    echo '<a href="' . esc_url($resource['link']) . '" target="_blank">外部連結</a>';
-                    echo '</div>';
-                }
-            }
-        } else {
-            echo '<p>資源檔案不存在。</p>';
-        }
+        if ( $resources_query->have_posts() ) :
+            while ( $resources_query->have_posts() ) : $resources_query->the_post();
+                $term = get_field('term');
+                $subject = get_field('subject');
+                $url = get_field('url');
+                $categories = get_the_category();
+                $category_list = ! empty( $categories ) ? esc_html( $categories[0]->name ) : '';
+                ?>
+                <div class="resource-item data-item bg-white rounded-lg p-4 shadow-md mb-4" 
+                     data-subject="<?php echo esc_attr($subject); ?>" 
+                     data-type="<?php echo esc_attr($category_list); ?>"
+                     data-term="<?php echo esc_attr($term); ?>">
+                    <h3 class="text-lg font-semibold mb-2"><?php the_title(); ?></h3>
+                    <p class="text-gray-600 mb-2">
+                        <?php echo esc_html( $term ); ?> | <?php echo esc_html( $subject ); ?> | <?php echo $category_list; ?>
+                    </p>
+                    <p>
+                        <a href="<?php echo esc_url( $url ); ?>" target="_blank" class="text-blue-600 hover:text-blue-800 underline">外部連結</a>
+                    </p>
+                </div>
+                <?php
+            endwhile;
+            wp_reset_postdata();
+        else :
+            echo '<p>目前沒有可用的資源。</p>';
+        endif;
         ?>
-
     </div>
 </section>
 
@@ -135,6 +136,7 @@ get_header('resources');
     // JavaScript for filtering data
     let selectedSubject = null;
     let selectedType = null;
+    let selectedTerm = null;
 
     document.querySelectorAll('#dropdown1 a').forEach(item => {
         item.addEventListener('click', function(e) {
@@ -159,13 +161,27 @@ get_header('resources');
             filterData();
         });
     });
+
+    document.querySelectorAll('#dropdown3 a').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            selectedTerm = this.dataset.term;
+            // if "全部" is selected, reset selectedTerm
+            if (selectedTerm === '全部') {
+                selectedTerm = null;
+            }
+            filterData();
+        });
+    });
+
     function filterData() {
         const dataItems = document.querySelectorAll('.data-item');
         dataItems.forEach(item => {
             const matchesSubject = selectedSubject ? item.dataset.subject === selectedSubject : true;
             const matchesType = selectedType ? item.dataset.type === selectedType : true;
+            const matchesTerm = selectedTerm ? item.dataset.term === selectedTerm : true;
 
-            if (matchesSubject && matchesType) {
+            if (matchesSubject && matchesType && matchesTerm) {
                 item.style.display = 'block';
             } else {
                 item.style.display = 'none';
@@ -215,8 +231,9 @@ get_header('resources');
         const searchTerm = this.value.toLowerCase();
         const dataItems = document.querySelectorAll('.data-item');
         dataItems.forEach(item => {
-            const description = item.querySelector('span:nth-child(2)').textContent.toLowerCase();
-            if (description.includes(searchTerm)) {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            const description = item.querySelector('p').textContent.toLowerCase();
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
                 item.style.display = 'block';
             } else {
                 item.style.display = 'none';

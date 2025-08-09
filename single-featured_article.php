@@ -1,6 +1,6 @@
 <?php get_header('one-article')?>
 
-<div id="primary" class="content-area bg-gray-50">
+<div id="primary" class="content-area bg-gray-50 pt-24">
     <main id="main" class="site-main">
 
     <?php
@@ -9,8 +9,8 @@
         the_post();
     ?>
         
-        <div>
-            <h1><?php the_title("%", "%", true); ?></h1>
+        <!-- we can use prose -->
+        <div class="prose prose-h1:text-4xl mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <?php the_content(); ?>
         </div><!-- .entry-content -->
 
@@ -24,12 +24,3 @@
 
 <?php get_footer()?>
 
-<!-- image part -->
-<header class="entry-header alignwide">
-                <h1 class="entry-title"><?php //the_title(); ?></h1>
-                <?php //if ( has_post_thumbnail() ) : ?>
-                    <div class="post-thumbnail">
-                        <?php //the_post_thumbnail('large'); ?>
-                    </div>
-                <?php //endif; ?>
-            </header><!-- .entry-header -->
