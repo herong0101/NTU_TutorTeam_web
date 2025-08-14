@@ -714,6 +714,15 @@ function post_text_indent($text){
 
 add_filter('the_content', 'post_text_indent');
 
+// exclude resource page indent
+function my_conditional_filter_removal() {
+    if ( is_page( 'resources' )) {
+        remove_filter( 'the_content', 'post_text_indent');
+    }
+}
+
+add_action( 'wp', 'my_conditional_filter_removal' );
+
 // use wordpress-native post type to store teaching resources(install "advenced custom field plugin")
 // Register Custom Post Type for Resources
 function create_resource_post_type() {

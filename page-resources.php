@@ -3,21 +3,22 @@
 get_header('resources');
 ?>
 
-<section class="container mx-auto p-4 bg-gray-50">
+<section class="container p-4 bg-gray-50">
     
     <!-- List Boxes -->
-    <div class="flex flex-row space-x-6">
+    <div class="flex flex-row mx-auto max-w-4xl space-x-6">
         <!-- List Box 1 -->
         <div class="relative inline-block flex flex-col space-y-2 w-40">
             <span class="text-sm">科目</span>
             <button id="dropdownButton1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-700 text-left inline-flex items-center justify-between" type="button">選擇科目</button>
             <div id="dropdown1" class="absolute z-10 hidden bg-white w-full border border-gray-300 rounded-md shadow-lg" style="top: 100%;">
                 <ul class="py-1 text-sm text-gray-700">
-                    <!-- 數甲、分科物理化學生物會再加入(resources.json也要改) -->
+                    <!-- 數甲、分科物理化學生物會再加入-->
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="全部">全部</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="國文">國文</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="英文">英文</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="數學">數學</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="學測數學">學測數學</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="分科數甲">分科數甲</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-100" data-subject="物理">物理</a></li>
                 </ul>
             </div>
@@ -58,9 +59,8 @@ get_header('resources');
         </div>
     </div>
     
-    
+    <!-- Toggle dropdowns independently -->
     <script>
-        // Toggle dropdowns independently
         document.getElementById('dropdownButton1').addEventListener('click', function() {
             const dropdown1 = document.getElementById('dropdown1');
             dropdown1.classList.toggle('hidden');
@@ -92,7 +92,7 @@ get_header('resources');
     </script>
 
     <!-- Data Display -->
-    <div id="data-container" class="mt-6">
+    <div id="data-container" class="mt-6 mx-auto max-w-4xl">
         <!-- Display resources from custom post type -->
         <?php
         $args = array(
@@ -106,22 +106,29 @@ get_header('resources');
             while ( $resources_query->have_posts() ) : $resources_query->the_post();
                 $term = get_field('term');
                 $subject = get_field('subject');
-                $url = get_field('url');
+                $url = get_field('URL');
                 $categories = get_the_category();
                 $category_list = ! empty( $categories ) ? esc_html( $categories[0]->name ) : '';
                 ?>
-                <div class="resource-item data-item bg-white rounded-lg p-4 shadow-md mb-4" 
-                     data-subject="<?php echo esc_attr($subject); ?>" 
-                     data-type="<?php echo esc_attr($category_list); ?>"
-                     data-term="<?php echo esc_attr($term); ?>">
-                    <h3 class="text-lg font-semibold mb-2"><?php the_title(); ?></h3>
-                    <p class="text-gray-600 mb-2">
-                        <?php echo esc_html( $term ); ?> | <?php echo esc_html( $subject ); ?> | <?php echo $category_list; ?>
-                    </p>
-                    <p>
-                        <a href="<?php echo esc_url( $url ); ?>" target="_blank" class="text-blue-600 hover:text-blue-800 underline">外部連結</a>
-                    </p>
-                </div>
+                <a href="<?php echo esc_url( $url ); ?>" target="_blank">
+                    <div class="resource-item data-item bg-white rounded-lg p-4 shadow-md mb-4" 
+                        data-subject="<?php echo esc_attr($subject); ?>" 
+                        data-type="<?php echo esc_attr($category_list); ?>"
+                        data-term="<?php echo esc_attr($term); ?>">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2"><?php the_title(); ?></h3>
+                        </div>
+                        <div>
+                            <?php
+                                $resource_content = get_the_content();
+                                if( !empty($resource_content)) the_content();
+                                else echo '<p> </p>';
+                            ?>
+                        </div>
+                        
+                    </div>
+                </a>
+                
                 <?php
             endwhile;
             wp_reset_postdata();
