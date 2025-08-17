@@ -1,7 +1,35 @@
-## Description
-* source: https://ithelp.ithome.com.tw/users/20111119/ironman/6303
-* Please follow the article to complete the configuration of tailwind css, wordpress installation etc.
+## 安裝步驟
+* 出處: https://ithelp.ithome.com.tw/users/20111119/ironman/6303
+* 請照著出處文章的步驟完成tailwind css的設置與wordpress安裝
 
-## Some must-know when developing
-* After you change css styling, make sure to run "npm run css". Note that we have configured package.json to enable us to run that command
-* **PLEASE TURN OFF ALL SERVICE PROVIDDED BY XAMPP BEFORE YOU SHUTDOWN THE COMPUTER**
+## 開發時的注意事項
+* 每次新增tailwind css樣式時要記得在終端機執行```npm run css```，新的樣式才會更新在style.css裡面
+* **務必記得要關閉XAMPP提供的Apache以及MySQL服務後再把電腦關機，否則將可能造成MySQL服務打不開(解決方式：https://stackoverflow.com/questions/18022809/how-can-i-solve-error-mysql-shutdown-unexpectedly)**
+
+## 目前架構與有的功能
+* 首頁
+    * 學員登入按鈕
+    * 報名計畫按鈕(學員以及老師幹部)
+    * 更多活動(**暫時擱置**)
+    * 最新消息(在後台上傳IG圖片與文案就能顯示，並且可以根據使用者點擊導引至該IG貼文)
+    * 計畫特色(工作坊、課程、講座)
+    * 協力組織
+* 精選文章
+    * 在後台上傳圖片並且利用wordpress本身的貼文編輯功能做排版
+    * 使用者可以點擊「閱讀全文」按鈕來進入文章連結
+* 教材資源
+    * 篩選機制
+        * 科目
+        * 類型
+        * 屆數
+        * 打字搜尋
+    * 資源展示
+        * 會根據使用者登入身分來決定是否顯示最新教材(登入後要在後台賦予使用者權限)
+        * 顯示資源名稱
+            * 格式：<屆數>-<學期><科目><類型><主題>，e.g. 113-2國文講義古詩
+        * 顯示資源描述
+            * 更詳細講解該教材內容
+* 關於我們
+    * 「我們期許有一天，人人都能享有平等教育資源」
+    * 剩下是美編排版...
+    
