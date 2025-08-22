@@ -5,8 +5,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "tailwind build ./assets/sass/index.scss -o ./style.css",
-    "dev": "vite",
-    "build": "vite build"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +12,6 @@
   "description": "",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "auto-prefixer": "^0.4.2",
-    "postcss": "^8.5.6",
-    "sass": "^1.89.2",
-    "tailwindcss": "^3.4.17",
-    "vite": "^6.3.5",
-    "vite-plugin-live-reload": "^3.0.4"
+    "sass": "^1.89.2"
   }
 }

@@ -2,8 +2,8 @@
 module.exports = {
   content: [
     "./**/*.php",
-    "./classes/*.php",
-    "./inc/*.php",
+    //"./classes/*.php",
+    //"./inc/*.php",
     "./template-parts/**/*.php",
   ],
   theme: {
