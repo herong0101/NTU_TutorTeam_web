@@ -11,13 +11,10 @@
 
 get_header();?>
 
-<section class="flex flex-col items-center justify-center" style="margin-top:160px">
+<!-- <section class="flex flex-col items-center justify-center" style="margin-top:160px">
     <div class="relative text-center">
         <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">近期活動</h1>
-        <!-- date, event, link -->
-        <!-- <div class="flex flex-col items-start justify-center space-y-4 mt-4"> -->
             <ul class="flex flex-col space-y-4 max-w-none max-h-none w-[800px] h-[300px] p-6 bg-gradient-to-br from-white to-seed shadow-md rounded-2xl border border-gray-200 overflow-hidden my-12">
-                <!-- Document preview area -->
                 <li class="flex flex-row space-x-4 items-center justify-center mt-6">
                     <p class="text-gray-700 mb-4 text-left">2025/07/02</p>
                     <p class="text-gray-700 mb-4 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing e</p>
@@ -34,12 +31,11 @@ get_header();?>
                     <a class="text-gray-700 mb-4 text-left" href="https://tailwindcss.com/">tailwind官方文件</a>
                 </li>
                 <div class="flex justify-center space-x-4">
-                    <a href="<?php echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black rounded-full text-lg px-8 py-3 text-center hover:bg-seed-gray transition duration-300">更多活動</button></a>
+                    <a href="<?php //echo home_url('/events/'); ?>"><button type="button" class="bg-opacity-0 text-black rounded-full text-lg px-8 py-3 text-center hover:bg-seed-gray transition duration-300">更多活動</button></a>
                 </div>
             </ul>
-        <!-- </div> -->
     </div>
-</section>
+</section> -->
 
 <section class="flex flex-col items-center justify-center" style="margin-top:160px">
     <div class="relative text-center">
@@ -174,55 +170,36 @@ get_header();?>
 </section>
 
 <!-- 計畫特色 -->
-<section class="flex flex-col items-center justify-center" style="margin-top:160px">
+<section class="flex flex-col items-center justify-center py-24">
     <div class="relative text-center">
         <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">計畫特色</h1>
         
-        <div class="relative flex justify-center items-start" style="height: 320px; margin-top:80px">
-            <!-- Left rectangle (lowered by 80px) -->
-            <div class="absolute left-1/2 transform -translate-x-[95%] top-[120px] w-[400px] h-[250px] bg-seed-orange rounded-2xl shadow-lg flex flex-col items-center justify-center z-10">
-                <h2 class="font-bold text-2xl mb-2">工作坊</h2>
+        <div class="flex flex-col md:flex-row gap-8 justify-center items-center mt-20 max-w-4xl mx-auto">
+            <!-- Card 1: 工作坊 -->
+            <div class="w-full md:w-1/2 bg-seed-orange rounded-2xl shadow-lg p-8 text-center">
+                <h2 class="font-bold text-3xl mb-4">工作坊</h2>
                 <p class="text-base text-gray-700">邀請專業人士、教授進行科系、備審、面試等工作坊。</p>
+                <div class="rounded-2xl bg-white text-black text-base">
+
+                </div>
             </div>
-            <!-- Right rectangle (higher, crosses left at center) -->
-            <div class="absolute left-1/2 transform -translate-x-[5%] -top-5 w-[400px] h-[250px] bg-seed-gray rounded-2xl shadow-lg flex flex-col items-center justify-center z-20">
-                <h2 class="font-bold text-2xl mb-2">升學課程</h2>
+            <!-- Card 2: 升學課程 -->
+            <div class="w-full md:w-1/2 bg-seed-gray rounded-2xl shadow-lg p-8 text-center">
+                <h2 class="font-bold text-3xl mb-4">升學課程</h2>
                 <p class="text-base text-gray-700">提供升大學之總複習課程以及高中各學科解題群組。</p>
             </div>
         </div>
 
-        <div class="flex flex-row items-center justify-center text-5xl" style="margin-top:120px">
-            <span class="font-Zen-Old-Mincho font-bold text-black">已免費服務超過</span>
-            <div id="counter" class="mx-2 text-black"></div>
-            <span class="font-Zen-Old-Mincho font-bold text-black">位高中學員</span>
+        <div class="mt-24">
+            <div class="flex flex-row items-center justify-center text-5xl">
+                <span class="font-Zen-Old-Mincho font-bold text-black">已免費服務超過</span>
+                <div id="counter" data-target="1200" class="mx-2 text-black">0</div>
+                <span class="font-Zen-Old-Mincho font-bold text-black">位高中學員</span>
+            </div>
+            <div class="flex flex-row items-center justify-center text-5xl mt-5">
+                <span class="font-Zen-Old-Mincho font-bold text-black">讓他們在升學的路上不孤單</span>
+            </div>
         </div>
-
-        <div class="flex flex-row items-center justify-center text-5xl" style="margin-top:20px">
-            <span class="font-Zen-Old-Mincho font-bold text-black">讓他們在升學的路上不孤單</span>
-        </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const el = document.getElementById('counter');
-                const duration = 1000; // 1 second
-                const end = 1200;
-                const start = 0;
-                const startTime = performance.now();
-
-                function animate(now) {
-                    const elapsed = now - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const value = Math.floor(progress * (end - start) + start);
-                    el.textContent = value;
-                    if (progress < 1) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        el.textContent = end;
-                    }
-                }
-                requestAnimationFrame(animate);
-            });
-        </script>
-        
     </div>
 </section>
 

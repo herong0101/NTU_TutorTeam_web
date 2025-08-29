@@ -706,6 +706,22 @@ function seed_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'seed_enqueue_styles' );
 
+// enqueue custom js script
+function seed_enqueue_front_page_scripts() {
+    // Only load this script on the front page.
+    if ( is_front_page() ) {
+        wp_enqueue_script(
+            'seed-counter',
+            get_template_directory_uri() . '/js/counter.js',
+            array(), // No dependencies
+            filemtime( get_stylesheet_directory() . '/js/counter.js' ), // Version for cache busting
+            true // Load in footer
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'seed_enqueue_front_page_scripts' );
+
+
 // the two space at post's first line
 function post_text_indent($text){
 	$return = str_replace('<p', '<p style="text-indent:2em;"', $text);
