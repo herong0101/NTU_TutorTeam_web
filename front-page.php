@@ -37,7 +37,7 @@ get_header();?>
     </div>
 </section> -->
 
-<section class="flex flex-col items-center justify-center" style="margin-top:160px">
+<section class="flex flex-col items-center justify-center py-24">
     <div class="relative text-center">
         <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">最新消息</h1>
         
@@ -174,19 +174,31 @@ get_header();?>
     <div class="relative text-center">
         <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">計畫特色</h1>
         
-        <div class="flex flex-col md:flex-row gap-8 justify-center items-center mt-20 max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-8 justify-center items-start mt-20 max-w-4xl mx-auto">
             <!-- Card 1: 工作坊 -->
             <div class="w-full md:w-1/2 bg-seed-orange rounded-2xl shadow-lg p-8 text-center">
                 <h2 class="font-bold text-3xl mb-4">工作坊</h2>
-                <p class="text-base text-gray-700">邀請專業人士、教授進行科系、備審、面試等工作坊。</p>
-                <div class="rounded-2xl bg-white text-black text-base">
-
+                <p class="text-base text-gray-700">邀請專業人士、教授來到工作坊分享：</p>
+                <div class="rounded-2xl bg-gray-50 p-8 h-16 mx-2 my-4 flex items-center justify-center">
+                    <span class="text-black text-xl">科系介紹</span>
+                </div>
+                <div class="rounded-2xl bg-gray-50 p-8 h-16 mx-2 my-4 flex items-center justify-center">
+                    <span class="text-black text-xl">備審準備</span>
+                </div>
+                <div class="rounded-2xl bg-gray-50 p-8 h-16 mx-2 my-4 flex items-center justify-center">
+                    <span class="text-black text-xl">面試心法</span>
                 </div>
             </div>
             <!-- Card 2: 升學課程 -->
             <div class="w-full md:w-1/2 bg-seed-gray rounded-2xl shadow-lg p-8 text-center">
                 <h2 class="font-bold text-3xl mb-4">升學課程</h2>
-                <p class="text-base text-gray-700">提供升大學之總複習課程以及高中各學科解題群組。</p>
+                <p class="text-base text-gray-700">學科方面也提供紮實資源：</p>
+                <div class="rounded-2xl bg-gray-50 p-8 h-16 mx-2 my-4 flex items-center justify-center">
+                    <span class="text-black text-xl">總複習課程</span>
+                </div>
+                <div class="rounded-2xl bg-gray-50 p-8 h-16 mx-2 my-4 flex items-center justify-center">
+                    <span class="text-black text-xl">各學科解題群組</span>
+                </div>
             </div>
         </div>
 
@@ -204,7 +216,7 @@ get_header();?>
 </section>
 
 <!-- 協力組織 -->
-<section class="flex flex-col items-center justify-center" style="margin-top:160px">
+<section class="flex flex-col items-center justify-center py-24">
     <div class="relative text-center">
         <h1 class="font-Zen-Old-Mincho font-bold px-3 py-2 text-6xl text-black">協力組織</h1>
         
