@@ -1,6 +1,14 @@
 <?php
 /* Template Name: Resources */
 get_header('resources');
+
+$is_authorized_student = false;
+if (is_user_logged_in()) {
+    $user = wp_get_current_user();
+    if (in_array('authorized_student', (array) $user->roles)) {
+        $is_authorized_student = true;
+    }
+}
 ?>
 
 <section class="container p-4 bg-gray-50">
@@ -95,22 +103,34 @@ get_header('resources');
     <div id="data-container" class="mt-6 mx-auto max-w-4xl">
         <!-- Display resources from custom post type -->
         <?php
+
         $args = array(
             'post_type' => 'resource',
             'posts_per_page' => -1, // Display all resources
             'post_status' => 'publish'
         );
-        $resources_query = new WP_Query( $args );
 
-        if ( $resources_query->have_posts() ) :
-            while ( $resources_query->have_posts() ) : $resources_query->the_post();
+        if (!$is_authorized_student) {
+            $args['meta_query'] = array(
+                array(
+                    'key'     => 'term',
+                    'value'   => '114',
+                    'compare' => '!='
+                )
+            );
+        }
+        $resources_query = new WP_Query($args);
+
+        if ($resources_query->have_posts()) :
+            while ($resources_query->have_posts()) :
+                $resources_query->the_post();
                 $term = get_field('term');
                 $subject = get_field('subject');
                 $url = get_field('URL');
                 $categories = get_the_category();
-                $category_list = ! empty( $categories ) ? esc_html( $categories[0]->name ) : '';
+                $category_list = !empty($categories) ? esc_html($categories[0]->name) : '';
                 ?>
-                <a href="<?php echo esc_url( $url ); ?>" target="_blank">
+                <a href="<?php echo esc_url($url); ?>" target="_blank">
                     <div class="resource-item data-item bg-white rounded-lg p-4 shadow-md mb-4" 
                         data-subject="<?php echo esc_attr($subject); ?>" 
                         data-type="<?php echo esc_attr($category_list); ?>"
@@ -120,9 +140,12 @@ get_header('resources');
                         </div>
                         <div>
                             <?php
-                                $resource_content = get_the_content();
-                                if( !empty($resource_content)) the_content();
-                                else echo '<p> </p>';
+                            $resource_content = get_the_content();
+                            if (!empty($resource_content)) {
+                                the_content();
+                            } else {
+                                echo '<p> </p>';
+                            }
                             ?>
                         </div>
                         
@@ -196,7 +219,8 @@ get_header('resources');
         });
     }
 
-    // implement lazy loading with pagination to first show 4 items, while user can click "load more" to load 4 more items and previously loaded items will not be removed
+    // implement lazy loading with pagination to first show 4 items,
+    // while user can click "load more" to load 4 more items and previously loaded items will not be removed
     let currentPage = 0;
     const itemsPerPage = 4;
     function loadMoreItems() {
