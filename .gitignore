@@ -1,0 +1,32 @@
+# WordPress
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+
+# Environment variables (重要！不要上傳密碼)
+.env
+
+# Docker volumes
+mysql_data/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+error_log
+access_log
+
+# Temporary files
+*.tmp
+*.temp
+*~
