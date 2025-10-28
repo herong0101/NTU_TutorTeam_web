@@ -1,3 +1,6 @@
 {
-  "buildImage": "wordpress:php8.2-apache"
+  "build_command": "echo 'Building WordPress with Docker'",
+  "start_command": "docker-php-entrypoint apache2-foreground",
+  "containerized": true,
+  "port": 80
 }
