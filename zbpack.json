@@ -1,5 +1,3 @@
 {
-  "build_command": "echo 'Using Docker Compose'",
-  "install_command": "echo 'No installation needed'",
-  "start_command": "docker-compose up -d"
+  "buildImage": "wordpress:php8.2-apache"
 }
