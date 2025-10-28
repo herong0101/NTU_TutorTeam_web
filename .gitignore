@@ -3,6 +3,10 @@ wp-content/uploads/
 wp-content/upgrade/
 wp-content/cache/
 
+# Node.js dependencies (不應上傳到 Git)
+node_modules/
+package-lock.json
+
 # Environment variables (重要！不要上傳密碼)
 .env
 
